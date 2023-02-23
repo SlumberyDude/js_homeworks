@@ -1,0 +1,26 @@
+<!-- # Task 1
+## Сделать первый символ заглавным
+важность: 5
+Напишите функцию ucFirst(str), возвращающую строку str с заглавным первым символом. Например:
+```js
+ucFirst("вася") == "Вася";
+``` -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ucFirst(str) {
+            return str[0].toUpperCase() + str.slice(1, str.length);
+        }
+        alert(ucFirst('вася'));
+        alert(ucFirst('саша'));
+        alert(ucFirst('петя'));
+    </script>
+</body>
+</html>

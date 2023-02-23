@@ -1,0 +1,28 @@
+<!-- Покажите день недели
+важность: 5
+Напишите функцию getWeekDay(date), показывающую день недели в коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».
+
+Например:
+
+let date = new Date(2012, 0, 3);  // 3 января 2012 года
+alert( getWeekDay(date) );        // нужно вывести "ВТ" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let date = new Date(2012, 0, 3);  // 3 января 2012 года
+        alert( getWeekDay(date) );        // нужно вывести "ВТ"
+
+        function getWeekDay(date) {
+            const weekDays = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+            return weekDays[date.getDay()];
+        }
+    </script>
+</body>
+</html>

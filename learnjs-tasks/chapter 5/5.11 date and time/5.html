@@ -1,0 +1,36 @@
+<!-- Последнее число месяца?
+важность: 5
+Напишите функцию getLastDayOfMonth(year, month), возвращающую последнее число месяца. 
+Иногда это 30, 31 или даже февральские 28/29.
+
+Параметры:
+
+year – год из четырёх цифр, например, 2012.
+month – месяц от 0 до 11.
+К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getLastDayOfMonth(year, month) {
+            if (month == 11) {
+                year += 1;
+                month = 0;
+            } else {
+                month += 1;
+            }
+            let date = new Date(year, month, 1);
+            date.setDate(date.getDate() - 1);
+            return date.getDate();   
+        }
+
+        alert(getLastDayOfMonth(2012, 1));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- Преобразуйте объект в JSON, а затем обратно в обычный объект
+важность: 5
+Преобразуйте user в JSON, затем прочитайте этот JSON в другую переменную.
+
+let user = {
+  name: "Василий Иванович",
+  age: 35
+}; -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: "Василий Иванович",
+            age: 35
+        };
+        let userJSON = JSON.stringify(user, null, 2);
+        console.log(userJSON);
+        alert(userJSON);
+        let anotherUser = JSON.parse(userJSON);
+        console.log(anotherUser);
+    </script>
+</body>
+</html>

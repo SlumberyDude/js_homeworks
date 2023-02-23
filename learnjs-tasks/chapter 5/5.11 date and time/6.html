@@ -1,0 +1,28 @@
+<!-- Сколько сегодня прошло секунд?
+важность: 5
+Напишите функцию getSecondsToday(), возвращающую количество секунд с начала сегодняшнего дня.
+
+Например, если сейчас 10:00, и не было перехода на зимнее/летнее время, то:
+
+getSecondsToday() == 36000 // (3600 * 10)
+Функция должна работать в любой день, т.е. в ней не должно быть конкретного 
+значения сегодняшней даты. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getSecondsToday() {
+            let date = new Date();
+            let msecs = date - new Date(date.getFullYear(), date.getMonth(), date.getDate());
+            return Math.round(msecs / 1000);
+        }
+        alert(`${getSecondsToday()} seconds passed today`);
+    </script>
+</body>
+</html>

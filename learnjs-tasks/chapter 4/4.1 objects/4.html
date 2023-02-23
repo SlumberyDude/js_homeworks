@@ -1,0 +1,41 @@
+<!-- ## Сумма свойств объекта
+важность: 5
+У нас есть объект, в котором хранятся зарплаты нашей команды:
+```js
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+}
+```
+Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+
+Если объект salaries пуст, то результат должен быть 0. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130
+        }
+        
+        alert(`salaries sum: ${sumSalaries(salaries)}`);
+
+        function sumSalaries(sal) {
+            res = 0;
+            for (let prop in sal) {
+                res += sal[prop];
+            }
+            return res;
+        }
+    </script>
+</body>
+</html>
