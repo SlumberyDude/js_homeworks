@@ -1,0 +1,20 @@
+<!-- Eval-калькулятор
+важность: 4
+Создайте калькулятор, который запрашивает ввод какого-нибудь арифметического выражения и возвращает результат его вычисления.
+
+В этой задаче нет необходимости проверять полученное выражение на корректность, просто вычислить и вернуть результат. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let expression = prompt('Введите выражение','');
+        alert(`Результат: ${eval(expression)}`);
+    </script>
+</body>
+</html>
